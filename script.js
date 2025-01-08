@@ -77,10 +77,10 @@ function buyKuota(provider, harga) {
     alert(`Anda membeli ${provider} seharga Rp${harga}.`);
 }
 
-window.addEventListener("DOMContentLoaded", checkLoginStatus);
-
 module.exports = {
     signup,
     login,
     hashPassword
 };
+
+window.addEventListener("DOMContentLoaded", checkLoginStatus);

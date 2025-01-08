@@ -10,33 +10,54 @@ function showLogin() {
     document.querySelector('.login-container').style.display = 'block';
 }
 
-function signup() {
+async function hashPassword(password) {
+    const msgUint8 = new TextEncoder().encode(password);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function signup() {
     const username = document.getElementById('signup-username').value;
     const password = document.getElementById('signup-password').value;
     const signupError = document.getElementById('signup-error');
 
     signupError.textContent = '';
 
+    if (username.trim() === '' || password.trim() === '') {
+        signupError.textContent = 'Please fill out all fields.';
+        return;
+    }
+
+    users = JSON.parse(localStorage.getItem('users')) || {}; // Load users again from localStorage
+
     if (username in users) {
         signupError.textContent = 'Username already exists.';
-    } else if (username && password) {
-        users[username] = password;
+    } else {
+        const hashedPassword = await hashPassword(password);
+        users[username] = hashedPassword;
         localStorage.setItem('users', JSON.stringify(users)); // Simpan user di Local Storage
         alert('Account created successfully!');
         showLogin();
-    } else {
-        signupError.textContent = 'Please fill out all fields.';
     }
 }
 
-function login() {
+async function login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const error = document.getElementById('error');
 
     error.textContent = '';
 
-    if (users[username] === password) {
+    if (username.trim() === '' || password.trim() === '') {
+        error.textContent = 'Please fill out all fields.';
+        return;
+    }
+
+    users = JSON.parse(localStorage.getItem('users')) || {}; // Load users from localStorage
+
+    const hashedPassword = await hashPassword(password);
+    if (users[username] === hashedPassword) {
         alert('Login successful!');
         localStorage.setItem('loggedInUser', username); // Simpan user yang login di Local Storage
         window.location.href = 'menu.html'; // Redirect ke halaman menu.html setelah login
@@ -48,11 +69,18 @@ function login() {
 function checkLoginStatus() {
     const loggedInUser = localStorage.getItem('loggedInUser');
     if (loggedInUser) {
-        window.location.href = 'index.html'; // Redirect langsung ke menu.html jika sudah login
+        window.location.href = 'menu.html'; // Redirect langsung ke menu.html jika sudah login
     }
 }
 
-// Cek status login saat halaman pertama kali dimuat
-// checkLoginStatus();
+function buyKuota(provider, harga) {
+    alert(`Anda membeli ${provider} seharga Rp${harga}.`);
+}
 
-window.addEventListener("DOMContentLoaded", () => {checkLoginStatus});
+window.addEventListener("DOMContentLoaded", checkLoginStatus);
+
+module.exports = {
+    signup,
+    login,
+    hashPassword
+};

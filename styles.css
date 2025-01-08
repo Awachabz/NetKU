@@ -11,6 +11,25 @@ body {
     position: relative;
 }
 
+/* Baris kuota */
+.card-container {
+    display: block; /* Mengatur kartu agar ditampilkan secara vertikal */
+    margin-top: 20px;
+}
+
+/* Kartu kuota */
+.card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    margin: 10px auto; /* Menempatkan kartu di tengah secara vertikal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
 /* Styling untuk logo di kiri atas */
 .logo-header {
     position: absolute;

@@ -74,7 +74,7 @@ function checkLoginStatus() {
 }
 
 function buyKuota(provider, harga) {
-    alert(`Anda membeli ${provider} seharga Rp${harga}.`);
+    alert(`Anda membeli kuota ${provider} seharga Rp${harga}.`);
 }
 
 module.exports = {

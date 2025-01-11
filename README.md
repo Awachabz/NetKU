@@ -1,5 +1,5 @@
 # NetKU 
-Adalah Sebuah Web Yang Kami kembangkan di Semester 4 
+Adalah Sebuah Web Yang Kami kembangkan Sejak Semester 4 
 
 
 

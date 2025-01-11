@@ -59,7 +59,8 @@ script :
 
 
 install Code Coverage
-   npx jest --coverage   
+
+    npx jest --coverage   
 
 
 
@@ -67,15 +68,16 @@ Package.json
 
 tambahkan 
 script : 
-     "scripts": {
-     "test": "jest --coverage",
-     "build": "babel src --out-dir dist"  
-    },
+
+      "scripts": {
+      "test": "jest --coverage",
+      "build": "babel src --out-dir dist"  
+     },
 
 
 
 Jalankan : 
-  npm test
+   npm test
 
 
 

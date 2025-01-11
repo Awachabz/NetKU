@@ -4,25 +4,34 @@ Adalah Sebuah Web Yang Kami kembangkan sejak Semester 4
 
 
 # Cara Install 
-install proyek Node.js
-   npm init -y
+install proyek
+
+   npm init 
 
 install Jest
+
     npm install --save-dev jest
  
 
 
 Menambahkan tdd
- Buat file pengujian 
+
+ Buat file pengujian
+
 Contoh: 
+
 coba.js 
+
 scipt :
 function coba(a, b) {
   return a + b;
 }
 module.exports = coba;
 
+
+
 coba.test.js
+
 const coba = require('./coba');
 
 test('adds 1 + 2 to equal 3', () => {
@@ -31,10 +40,14 @@ test('adds 1 + 2 to equal 3', () => {
 
 
 
+
+
 Install Babel 
+
 npm install --save-dev @babel/core @babel/cli @babel/preset-env
 
 buat file : .babelrc
+
 script : 
 {
   "presets": ["@babel/preset-env"]
@@ -42,16 +55,22 @@ script :
 
 
 
+
+
 install Code Coverage
 npx jest --coverage
 
 
+
 Package.json
-tambahkan script : 
+
+tambahkan 
+script : 
     "scripts": {
     "test": "jest --coverage",
     "build": "babel src --out-dir dist"  
   },
+
 
 
 Jalankan : npm test

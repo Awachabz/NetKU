@@ -119,7 +119,7 @@ Maka akan keluar
 *Main
 
 
-Jika *Master Push dengan
+# Jika *Master Push dengan
 
     git push -u origin master
 
@@ -134,7 +134,7 @@ mengirim cabang ke repository Github
      git push origin main
 
 
-Push Ke Github
+# Push Ke Github
 Cek Status : 
 
     git status
@@ -152,6 +152,11 @@ contoh :
  " Menambahkan fitur login"
 
  " Memperbaiki bug pada halaman"
+
+ Push : 
+
+
+      git push origin master
 
 
 

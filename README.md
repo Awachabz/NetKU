@@ -90,7 +90,7 @@ Ganti cabang lokal dari Master ke Main
 git branch -m master main
 
 mengirim cabang ke repository Github
-git push -u origin main
+git push origin main
 
 
 Push Ke Github

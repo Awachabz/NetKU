@@ -148,9 +148,10 @@ Buat Perubahan :
      git commit -m "Pesan untuk menjelaskan perubahan"
   
 
-contoh : " Menambahkan fitur login"
+contoh : 
+ " Menambahkan fitur login"
 
-         " Memperbaiki bug pada halaman"
+ " Memperbaiki bug pada halaman"
 
 
 

@@ -6,7 +6,7 @@ Adalah Sebuah Web Yang Kami kembangkan sejak Semester 4
 # Cara Install 
 install proyek
 
-   npm init 
+    npm init 
 
 install Jest
 
@@ -23,20 +23,21 @@ Contoh:
 coba.js 
 
 scipt :
-function coba(a, b) {
-  return a + b;
-}
-module.exports = coba;
+    function coba(a, b) {
+     return a + b;
+      }
+      module.exports = coba;
+
 
 
 
 coba.test.js
 
-const coba = require('./coba');
+       const coba = require('./coba');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(coba(1, 2)).toBe(3);
-});
+     test('adds 1 + 2 to equal 3', () => {
+     expect(coba(1, 2)).toBe(3);
+     });
 
 
 
@@ -44,21 +45,21 @@ test('adds 1 + 2 to equal 3', () => {
 
 Install Babel 
 
-npm install --save-dev @babel/core @babel/cli @babel/preset-env
+    npm install --save-dev @babel/core @babel/cli @babel/preset-env
 
 buat file : .babelrc
 
 script : 
-{
-  "presets": ["@babel/preset-env"]
-}
+   {
+      "presets": ["@babel/preset-env"]
+   }
 
 
 
 
 
 install Code Coverage
-npx jest --coverage
+   npx jest --coverage   
 
 
 
@@ -66,14 +67,15 @@ Package.json
 
 tambahkan 
 script : 
-    "scripts": {
-    "test": "jest --coverage",
-    "build": "babel src --out-dir dist"  
-  },
+     "scripts": {
+     "test": "jest --coverage",
+     "build": "babel src --out-dir dist"  
+    },
 
 
 
-Jalankan : npm test
+Jalankan : 
+  npm test
 
 
 

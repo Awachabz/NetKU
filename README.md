@@ -113,33 +113,43 @@ Periksa nama cabang Lokal
 
 
 Maka akan keluar 
+
 *Master
+
 *Main
 
 
 Jika *Master Push dengan
-    git push -u origin master
+
+  git push -u origin master
 
 
 
 Ganti cabang lokal dari Master ke Main
-     git branch -m master main
+
+ git branch -m master main
 
 mengirim cabang ke repository Github
-     git push origin main
+
+  git push origin main
 
 
 Push Ke Github
 Cek Status : 
+
     git status
+
 Menambahkan file/merubah file : 
+
     git add .
 
 Buat Perubahan :
+
    git commit -m "Pesan untuk menjelaskan perubahan"
-   
-         contoh : " Menambahkan fitur login"
-                   " Memperbaiki bug pada halaman"
+  
+
+contoh : " Menambahkan fitur login"
+         " Memperbaiki bug pada halaman"
 
 
 

@@ -77,49 +77,67 @@ script :
 
 
 Jalankan : 
-   npm test
+
+    npm test
 
 
 
 
 menyambungkan dengan GIT
+
 install Git:
-git init
+
+    git init
+
 
 menambahkan semua file ke Git:
-git add .
+
+
+    git add .
+
+
 
 Buat commit awal
-git commit -m "initial commit"
 
 
-Sambungkan repository ke Github:
-git init
+    git commit -m "initial commit"
 
-masuk ke file nya
-cd .git
+-(initial commit) Wajib, Bebas menggunakan kata apa saja   
+contoh : "Menambahkan Fitur Login"
+         "Menamahkan Logo"
+
 
 Periksa nama cabang Lokal
-git branch
+
+    git branch
+
 
 Maka akan keluar 
 *Master
 *Main
 
+
 Jika *Master Push dengan
-git push -u origin master
+    git push -u origin master
+
+
 
 Ganti cabang lokal dari Master ke Main
-git branch -m master main
+     git branch -m master main
 
 mengirim cabang ke repository Github
-git push origin main
+     git push origin main
 
 
 Push Ke Github
-Cek Status : git status
-Menambahkan file/merubah file : git add .
-Buat Perubahan : git commit -m "Pesan untuk menjelaskan perubahan"
+Cek Status : 
+    git status
+Menambahkan file/merubah file : 
+    git add .
+
+Buat Perubahan :
+   git commit -m "Pesan untuk menjelaskan perubahan"
+   
          contoh : " Menambahkan fitur login"
                    " Memperbaiki bug pada halaman"
 

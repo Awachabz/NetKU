@@ -81,13 +81,30 @@ Jalankan :
     npm test
 
 
-
+# Menyambungkan dengan Github
 
 menyambungkan dengan GIT
 
 install Git:
 
     git init
+
+
+menyambungkan Repository
+
+      git remote set-url origin https://github.com/Awachabz/NetKU
+
+ Cek Repository
+
+     git remote -v
+
+Maka Outputnya akan
+
+-  origin  https://github.com/Awachabz/NetKU (fetch)
+
+
+-  origin  https://github.com/Awachabz/NetKU (push)
+
 
 
 menambahkan semua file ke Git:
@@ -119,7 +136,7 @@ Maka akan keluar
 *Main
 
 
-# Jika *Master Push dengan
+ Jika *Master Push dengan
 
     git push -u origin master
 

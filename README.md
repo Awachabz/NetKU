@@ -119,7 +119,7 @@ Buat commit awal
 
     git commit -m "initial commit"
 
--(initial commit) Wajib, Bebas menggunakan kata apa saja   
+* (initial commit) Wajib, Bebas menggunakan kata apa saja   
 contoh : "Menambahkan Fitur Login"
          "Menamahkan Logo"
 
